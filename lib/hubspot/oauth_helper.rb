@@ -6,7 +6,7 @@ module Hubspot
         query = URI.encode_www_form(
           client_id: client_id,
           redirect_uri: redirect_uri,
-          scope: Array(scope),
+          scope: Array(scope).join(' '),
           optional_scope: Array(optional_scope)
         )
 
